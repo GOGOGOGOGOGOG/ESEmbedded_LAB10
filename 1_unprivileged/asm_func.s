@@ -23,7 +23,7 @@ read_ctrl:
 start_user:
      mov r2, #0b0011 //把r2變成暫存器
 	 ISB
-	 MSR psp,r1  // 把psp設成主要main stack pointer 
+	 MSR psp,r1  // 把psp設成 stack pointer 
      MSR CONTROL, r2  //注意順序 其定義因為是改成unpriviledged 若是把這一行放到前一行 就會出錯
      bx r0 //有無回傳都沒差
 
